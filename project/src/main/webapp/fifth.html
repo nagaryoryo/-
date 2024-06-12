@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<style>
+.flex{display:flex;}
+.flex .image{
+	width:100%;
+	margin:0;
+	padding:0;
+	
+	position:relative;
+}
+.flex .text{
+	margin:0% 20% 5% 0.5%;
+	padding:0.1%;
+}
+.flex .text .color{
+color:red;
+}
+.line{
+text-decoration:underline;
+font-size:40px;
+}
+body{
+margin:40px;
+}
+ul {
+  padding: 0;
+}
+
+ul li, ol li {
+  color: #404040;
+  border-left: solid 6px #1fa67a;/*左側の線*/
+  border-bottom: solid 2px #dadada;/*下に灰色線*/
+  background: whitesmoke;
+  margin-bottom: 5px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+  font-weight: bold;
+}
+</style>
+
+<head>
+<meta charset="UTF-8">
+<title>長崎の観光地</title>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBHNCFGoO8JvGPG4qO7sy-B-h9zxDFgbuI"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="googlemaps.js"></script>
+<script>
+$(document).ready(function(){
+    drawMap("長崎原爆資料館", "map_canvas");
+    drawMap2("長崎韓国展望所", "map_canvas2");
+    drawMap3("ハウステンボス", "map_canvas3");
+});
+
+</script>
+</head>
+
+
+<body >
+<h1>　　　　　　　　　　　　　　　　　　　観光案内所</h1>
+
+<hr>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.knt.co.jp/yado/" style="font-size:25px; color:black;">旅館</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.knt.co.jp/yado/" style="font-size:25px; color:black;">ホテル</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.knt.co.jp/meito/" style="font-size:25px; color:black;">国内旅行</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.knt.co.jp/tabinaka/" style="font-size:25px; color:black;">旅行プラン</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.knt.co.jp/holiday/" style="font-size:25px; color:black;">海外旅行</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<hr>
+<br>
+<p style="font-size:30px">長崎のBest3はここ！異国情緒あふれる長崎県のおすすめ観光スポットをご紹介！</p>
+<img src="travelguide_040_04.png" width=1200 height=600>
+<p>ハウステンボスや韓国展望所など有名な観光スポットを数多く要する長崎県。古くから貿易で栄えた港町であることから、異国情緒にあふれた観光スポットが各地に点<br>在しています。そんな長崎の異国の香り漂う観光スポットをはじめ、おすすめの名所をご紹介いたします。</p>
+<br>
+
+<ul>
+　<li>　　　目次</li>
+  <li>１．戦争や原爆に関する資料が閲覧できる「長崎原爆資料館」(長崎市)</li>
+  <li>２．日本にいながら韓国が見える絶景ポイント「韓国展望所」(対馬市)</li>
+  <li>３．花と光の感動リゾート「ハウステンボス」(佐世保市)</li>
+</ul>
+<br>
+<h2>３位：長崎原爆資料館</h2>
+
+<div class="flex">
+<figure class="image">
+<img src="travelguide_040_04.png" width=600 height=300> 
+</figure>
+<div class="text">
+<h4 style="color: #cc9900;">＜美術館・博物館＞</h4>
+<br><p>長崎原爆資料館は、原爆や戦争・平和について、じっくりと向き合うことができる施設です。
+原爆の被害にあった家屋の跡や服、惨状を描いた絵画、原爆投下直後の様子を写した写真、被爆者の罹災証明書など、被爆の惨状をさまざまな方法で展示しています。
+原爆が投下されるに至った経緯、核兵器開発の歴史、平和希求などストーリー性を持たせたわかりやすい展示となっており、改めて原爆とはなにか平和とはなにかを考えさせられます。
+平和学習にも力を入れており、原爆・平和関係の図書閲覧ができるほか、ビデオコーナーを設置した図書室も併設しています。
+</p>
+</div>
+</div>
+<table border="1" style="background-color: #ffdab9;">
+<tr>
+<th>住所：〒852-8117 長崎県長崎市平野町7-8<hr>
+料金：一般　200円、小学生・中学生・高校生　100円<hr>
+定休日：12月29日～31日<hr>
+電車でのアクセス：<br>
+長崎電気軌道「原爆資料館」電停下車、徒歩約5分<hr>
+車でのアクセス：<br>
+長崎自動車道「長崎多良見IC」から長崎バイパスへ入り、<br>
+「川平IC（平和公園・昭和町方面）」経由で約10分
+
+</th>
+<th>
+<div id="map_canvas" style="width:500px;height:300px"></div>
+</th></tr>
+</table>
+<br><br>
+<h2>２位：韓国展望所</h2>
+
+<div class="flex">
+<figure class="image">
+<img src="travelguide_040_14.png" width=600 height=300> 
+</figure>
+<div class="text">
+<h4 style="color: #cc9900;">＜絶景＞</h4>
+<br><p>
+「韓国展望所」は、晴れた日には海だけでなく対岸の韓国・釜山の街並みを望め日本にいながら異国を感じることができる人気の場所です。
+昼間だけでなく、夜は釜山のビル群がライトアップされてとてもきれいに見えます。
+展望所には無料の望遠鏡がついていて、トイレや駐車場も完備されているのが嬉しいところ。
+近くにある豊砲台跡は第二次世界大戦まで「世界最大の巨砲」が設置されていた砲台で、寂れたコンクリートの内部に残る木枠は当時を彷彿とさせ、巨大な砲塔の圧倒的存在感は一見の価値あり。探検気分も味わえます。
+</p>
+</div></div>
+
+<table border="1" style="background-color: #ffdab9;">
+<tr>
+<th>住所：〒817-1723 長崎県対馬市上対馬町鰐浦<hr>
+料金：無料<hr>
+定休日：12月29日～31日<hr>
+車でのアクセス：<br>
+対馬空港から車で約1時間30分<br>
+　厳原港から車で約1時間50分<br>
+　比田勝港から車で約15分
+
+</th>
+<th>
+<div id="map_canvas2" style="width:500px;height:200px"></div>
+</th></tr>
+</table>
+
+<br><br>
+<h2>１位：ハウステンボス</h2>
+
+<div class="flex">
+<figure class="image">
+<img src="travelguide_040_01.png" width=600 height=300> 
+</figure>
+<div class="text">
+
+<h4 style="color: #cc9900;">＜テーマパーク＞</h4>
+<p>
+日本最多品種のチューリップが咲き誇る「100万本のチューリップ祭」、アジア最大級のバラに街中が包まれる「バラ祭」をはじめ、華やかなパレードやショーが街にあふれる「フラワーフェスティバル」など、五感いっぱいに「花の街」を体験できます。<br>
+秋から冬にかけては世界最大1,300万球が輝く「光の王国」として、眼前にまさに夢の一夜が広がります！
+自然の中で遊べるアスレチックが集まった「アドベンチャーパーク」や、無人島探検を安全に体験できるデジタルアトラクション「ジュラシックアイランド」など、子どもも大人も一緒に遊べるアクティビティも充実！
+ヨーロッパの街並みの中に建つオフィシャルホテルでは非日常を体感出来ます。
+</p>
+</div></div>
+
+<table border="1" style="background-color: #ffdab9;">
+<tr>
+<th>住所：〒859-3292 長崎県佐世保市ハウステンボス町1‐1<hr>
+料金(1DAYパスポート):<br>
+大人（18歳以上）7,000円、中学・高校生6,000円、<br>子ども（小学生）4,600円、未就学児3,500円<hr>
+定休日：なし<hr>
+電車でのアクセス：<br>
+JR大村線「ハウステンボス駅」から徒歩約5分<hr>
+車でのアクセス：<br>
+　西九州自動車道「佐世保大塔IC」から約10分<br>
+　長崎自動車道「東そのぎIC」から約25分、
+
+</th>
+<th>
+<div id="map_canvas3" style="width:500px;height:300px"></div>
+</th></tr>
+</table>
+<br>
+
+<div style="border: 2px solid black;">
+    <p style="font-size: 25px;">◎まとめ</p>
+    <p>　　いかがでしたか？長崎には異国情緒あふれた観光スポットが多くあります。長崎に観光で訪れた際は、今回ご紹介したスポットへ足を運んでみてください！</p>
+<br>
+</div>
+
+<hr>
+<h4>参考資料：https://www.knt.co.jp/travelguide/kokunai/040/</h4>
+<h4>　　　　：https://www.photo-ac.com/main/search?q=%E9%95%B7%E5%B4%8E%E3%81%AE%E5%A4%9C%E6%99%AF&srt=dlrank&qt=&p=1&pt=B</h4>
+</body>
+</html>
+
+
+
+
+
+
+
